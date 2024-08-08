@@ -1,0 +1,250 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'learning_paths/styles.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Tech Learning Path</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header id="home">
+      <section class="header">
+        <div class="container">
+          <div class="logo">
+            <a href="index.html"
+              ><img src="./img/Nexus_logo.png" alt="Nexus Logo"
+            /></a>
+          </div>
+          <nav>
+            <ul class="nav-links">
+              <li><a href="#demo">Demo</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#testimonial">Testimonials</a></li>
+              <li><a href="#Contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+              <i class="fas fa-bars"></i>
+            </div>
+          </nav>
+          <div class="sidebar">
+            <div class="close-btn">
+              <i class="fas fa-times"></i>
+            </div>
+            <ul class="sidebar-links">
+              <li><a href="#demo">Demo</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#testimonial">Testimonials</a></li>
+              <li><a href="#Contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- HERO SECTION -->
+      <section class="hero-section">
+        <div class="hero-image">
+          <div class="hero-text">
+            <h1>Empower Your Tech Journey</h1>
+            <p>Personalized Learning Paths Tailored Just For You.</p>
+            <div class="button-group">
+              <!-- <a
+                href="./img/tech_learning_path.exe"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hero-btn get-started-btn"
+                >Get Started</a
+              > -->
+              <a 
+                href="./question.html"
+                class="hero-btn get-started-btn">Get Started
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- DEMO -->
+    <section class="demo" id="demo">
+      <div class="demo-text">
+        <h1>Watch a Demo</h1>
+      </div>
+      <div class="video-container">
+        <video controls>
+          <source src="./video/Tech Learning Path.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="about">
+        <div class="about-text">
+          <h1>About Tech Learning Path Prompt System</h1>
+          <p>
+            Welcome to the Tech Learning Path Prompt System, your go-to
+            AI-powered tool for navigating the tech world. Whether you're a
+            beginner or switching careers, our platform offers personalized,
+            step-by-step learning paths that match your interests and career
+            aspirations.
+          </p>
+        </div>
+      </div>
+      <!-- Cards Section -->
+      <section class="cards-section">
+        <div class="card-container">
+          <div class="card">
+            <img
+              src="./img/pexels-michelangelo-buonarroti-8728562.jpg"
+              alt="Mission"
+            />
+            <h3>Our Mission</h3>
+            <p>
+              To provide AI-driven, personalized learning paths for tech
+              enthusiasts and professionals.
+            </p>
+          </div>
+          <div class="card">
+            <img src="./img/pexels-pavel-danilyuk-8439093.jpg" alt="Vision" />
+            <h3>Our Vision</h3>
+            <p>
+              To be a leader in tech education, making advanced learning
+              accessible to all.
+            </p>
+          </div>
+          <div class="card">
+            <img src="./img/pexels-divinetechygirl-1181243.jpg" alt="Values" />
+            <h3>Our Values</h3>
+            <p>
+              Innovation, Integrity, Excellence, Inclusivity, and Community.
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonial">
+      <div class="testimonial">
+        <h1>What Our Users Say</h1>
+        <div class="users">
+          <div class="user">
+            <figure>
+              <div>
+                  <img
+                    src="./img/jacinta.jpg"
+                    alt="User 1"
+                  />
+              </div>
+              <figcaption>Tech Enthusiast</figcaption>
+              <p>"This platform made my entry into tech smooth"</p>
+            </figure>
+          </div>
+          <div class="user">
+            <figure>
+              <div><img src="./img/pexels-pavel-danilyuk-8439093.jpg" alt="User 2" /></div>
+              <figcaption>Career Switch</figcaption>
+              <p>
+                "I transitioned into a tech career seamlessly with their
+                personalized paths"
+              </p>
+            </figure>
+          </div>
+          <div class="user">
+            <figure>
+              <div><img src="./img/udeme.jpg" alt="User 3" /></div>
+              <figcaption>Developer</figcaption>
+              <p>"The guidance I received was invaluable for my career growth"</p>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <div class="contact" id="Contact">
+      <h2>Contact Us</h2>
+      <p class="sub-text">
+        Let us know how we can help make your experience with us better! 😊
+      </p>
+      <div class="contact-form">
+        <form name="contact">
+          <div class="input-container">
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              placeholder="Full Name"
+              required
+            />
+          </div>
+          <div class="input-container">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+          <div class="input-container">
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write your message here"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">
+            <i class="fas fa-arrow-right"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="contact-info">
+          <h1>Contact Information:</h1>
+          <ul>
+            <li>Email: support@techpathsystem.com</li>
+            <li>Phone: +123-456-7890</li>
+            <li>
+              Social Media:
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="links">
+          <h1>Quick Links:</h1>
+          <ul>
+            <li><a href="#demo">Demo</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#testimonial">Testimonials</a></li>
+            <li><a href="#Contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p><i>&copy; Copyright NexusAI 2024. All rights reserved.</i></p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

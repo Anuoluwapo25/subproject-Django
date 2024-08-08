@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Path Survey</title>
+    <link rel="stylesheet" href="{% static 'learning_paths/questions.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    <!-- Navbar -->
+    <header id="home">
+        <section class="header">
+            <div class="navbar-container">
+                <div class="logo">
+                    <a href="index.html"><img src="./img/Nexus_logo.png" alt="Nexus Logo"></a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="questions.html">NexusAi</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+    <!-- Introduction Section -->
+    <div class="intro-container">
+        <h2>Welcome to NexusAI Learning Path Survey</h2>
+        <p>
+            At NexusAI, we are dedicated to guiding you on your journey to mastering technology. 
+            Our AI-powered platform helps identify your unique learning path based on your current 
+            skills, interests, and goals. To get the most out of this experience.
+        </p>
+        <p>
+            Once you complete the survey, NexusAI will analyze your responses to curate a personalized 
+            learning path, guiding you through courses, resources, and certifications to achieve your goals.
+        </p>
+        <p>
+            Let's get started!
+        </p>
+    </div>
+
+    <div class="main-container">
+        <h1 class="header">Learning Path Survey</h1>
+        <form method="post" action="{% url 'result' %}">
+            {% csrf_token %}
+            <!-- Your form fields here -->
+            
+            <!-- Example of a form field: -->
+            <fieldset>
+                <legend>Interests and Goals</legend>
+                <label for="tech-areas">Tech areas of interest:</label>
+                <select id="tech-areas" name="interests" multiple>
+                    <option value="web-development">Web Development</option>
+                    <option value="data-science">Data Science</option>
+                    <option value="cybersecurity">Cybersecurity</option>
+                    <option value="ai-ml">AI/ML</option>
+                    <option value="cloud-computing">Cloud Computing</option>
+                </select>
+            </fieldset>
+
+            <!-- Add other form fields -->
+
+            <button type="submit">Generate Learning Path</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="contact-info">
+                <h1>Contact Information:</h1>
+                <ul>
+                    <li>Email: support@techpathsystem.com</li>
+                    <li>Phone: +123-456-7890</li>
+                    <li>Social Media:
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="links">
+                <h1>Quick Links:</h1>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="questions.html">NexusAi</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            
+            <p><i>&copy; Copyright NexusAI 2024. All rights reserved.</i></p>
+        </div>
+    </footer>
+
+</body>
+</html>
