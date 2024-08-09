@@ -18,11 +18,15 @@ def get_ai_suggestions(interests):
     model = genai.GenerativeModel('gemini-pro')
     prompt = f"""For someone interested in {', '.join(interests)}, please provide:
 
-1. Overview:
+1. Name:
+  - Name of project
+
+
+2. Overview:
    - Brief description of each selected technology
    - How these technologies relate to each other (if applicable)
 
-2. Resources:
+3. Resources:
    - Types of courses or certifications that would be beneficial
    - Recommended books or online resources
    - Relevant communities or forums for support and networking
