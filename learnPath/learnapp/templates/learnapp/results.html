@@ -1,0 +1,193 @@
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personalized Learning Path</title>
+    <link rel="stylesheet" href="{% static 'learnapp/styles.css' %}">
+</head>
+<body>
+   
+
+    <div class="results-container">
+        <h1>Your Personalized Learning Path</h1>
+
+        <h2>AI Suggestions</h2>
+        <div class="ai-suggestions">
+            {{ ai_suggestions|linebreaks }}
+        </div>
+
+        <h2>Recommended Coursera Courses</h2>
+        <div class="coursera-courses">
+            {% for course in coursera_courses %}
+                <div class="course">
+                    <h3>{{ course.name }}</h3>
+                    <a href="{{ course.url }}" target="_blank">View Course</a>
+                </div>
+            {% empty %}
+                <p>No courses found for your interests.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    
+</body>
+</html> -->
+
+
+
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personalized Learning Path</title>
+    <link rel="stylesheet" href="{% static 'learnapp/results.css' %}">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <header class="dashboard-header">
+            <h1>Your Personalized Learning Path</h1>
+        </header>
+
+       
+        <div class="dashboard-content">
+            AI Suggestions 
+            <section class="dashboard-section">
+                <h2>AI Suggestions</h2>
+                <div class="ai-suggestions">
+                    {{ ai_suggestions|linebreaks }}
+                </div>
+            </section>
+
+            
+            <section class="dashboard-section">
+                <h2>Recommended Coursera Courses</h2>
+                <div class="coursera-courses">
+                    {% for course in coursera_courses %}
+                        <div class="course">
+                            <h3>{{ course.name }}</h3>
+                            <a href="{{ course.url }}" target="_blank">View Course</a>
+                        </div>
+                    {% empty %}
+                        <p>No courses found for your interests.</p>
+                    {% endfor %}
+                </div>
+            </section>
+
+             Additional Sections (e.g., Progress Tracker, Learning Goals, etc.)
+            <section class="dashboard-section">
+                
+            </section>
+        </div>
+
+      
+        <footer class="dashboard-footer">
+           
+        </footer>
+    </div>
+</body>
+</html> --> 
+
+
+
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personalized Learning Path</title>
+    <link rel="stylesheet" href="{% static 'learnapp/styles.css' %}">
+</head>
+<body>
+    <div class="results-container">
+        <h1>Your Personalized Learning Path</h1>
+        <h2>AI Suggestions</h2>
+        <div class="ai-suggestions">
+            {{ ai_suggestions|linebreaks }}
+        </div>
+        <h2>Recommended Coursera Courses</h2>
+        <div class="coursera-courses">
+            {% for course in coursera_courses %}
+            <div class="course">
+                <h3>{{ course.name }}</h3>
+                <a href="{{ course.url }}" target="_blank">View Course</a>
+            </div>
+            {% empty %}
+            <p>No courses found for your interests.</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+ -->
+ {% load static %}
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Your Personalized Learning Path</title>
+     <link rel="stylesheet" href="{% static 'learnapp/results.css' %}">
+ </head>
+ <body>
+    <header id="home">
+        <section class="header">
+            <div class="navbar-container">
+                <div class="logo">
+                    <a href="index.html"><img src="{% static 'img/Nexus_logo.png' %}" alt="Nexus Logo"></a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="questions.html">NexusAi</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+     <div class="container">
+         <aside class="sidebar">
+             <!-- <h2>Navigation</h2> -->
+             <ul>
+                 <li><a href="#ai-suggestions">AI Suggestions</a></li>
+                 <li><a href="#coursera-courses">Coursera Courses</a></li>
+                 <!-- Add more links as needed -->
+             </ul>
+         </aside>
+         <main class="main-content">
+             <div class="results-container">
+                <div class="ai-suggestion">
+                 <h1>Your Personalized Learning Path</h1>
+                 <h2 id="ai-suggestions">AI Suggestions</h2>
+                 <div class="ai-suggestions-grid">
+                    {{ ai_suggestions|linebreaks }}
+                </div>
+                </div>
+                 <h2 id="coursera-courses">Recommended Coursera Courses</h2>
+                 <div class="coursera-courses">
+                     {% for course in coursera_courses %}
+                     <div class="course">
+                         <h3>{{ course.name }}</h3>
+                         <a href="{{ course.url }}" target="_blank">View Course</a>
+                     </div>
+                     {% empty %}
+                     <p>No courses found for your interests.</p>
+                     {% endfor %}
+                 </div>
+             </div>
+         </main>
+     </div>
+ </body>
+ </html>
+ 

@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Path Survey</title>
+    <link rel="stylesheet" href="{% static 'learnapp/questions.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    <!-- Navbar -->
+    <header id="home">
+        <section class="header">
+            <div class="navbar-container">
+                <div class="logo">
+                    <a href="index.html"><img src="{% static 'img/Nexus_logo.png' %}" alt="Nexus Logo"></a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="questions.html">NexusAi</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+    <!-- Introduction Section -->
+    <div class="intro-container">
+        <h2>Welcome to NexusAI Learning Path Survey</h2>
+        <p>
+            At NexusAI, we are dedicated to guiding you on your journey to mastering technology. 
+            Our AI-powered platform helps identify your unique learning path based on your current 
+            skills, interests, and goals. To get the most out of this experience.
+        </p>
+        <p>
+            Once you complete the survey, NexusAI will analyze your responses to curate a personalized 
+            learning path, guiding you through courses, resources, and certifications to achieve your goals.
+        </p>
+        <p>
+            Let's get started!
+        </p>
+    </div>
+
+    <div class="main-container">
+        <h1 class="header">Learning Path Survey</h1>
+        <form method="post" action="{% url 'results' %}">
+            {% csrf_token %}
+            
+            <fieldset>
+                <legend>Interests and Goals</legend>
+                <label for="tech-areas">Tech areas of interest:</label>
+                <select id="tech-areas" name="interests">
+                    <option value="">Select an area of interest</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="data-science">Data Science</option>
+                    <option value="cybersecurity">Cybersecurity</option>
+                    <option value="ai-ml">AI/ML</option>
+                    <option value="cloud-computing">Cloud Computing</option>
+                    <option value="cloud-computing">Cloud Computing</option>
+                    <option value="devops">DevOps</option>
+                    <option value="blockchain">Blockchain</option>
+                    <option value="iot">Internet of Things (IoT)</option>
+                    <option value="big-data">Big Data</option>
+                    <option value="data-analytics">Data Analytics</option>
+                    <option value="ui-ux-design">UI/UX Design</option>
+                    <option value="game-development">Game Development</option>
+                    <option value="ar">Augmented Reality (AR)</option>
+                    <option value="vr">Virtual Reality (VR)</option>
+                    <option value="robotics">Robotics</option>
+                    <option value="network-engineering">Network Engineering</option>
+                    <option value="database-management">Database Management</option>
+                    <option value="full-stack-development">Full Stack Development</option>
+                    <option value="front-end-development">Front-end Development</option>
+                    <option value="back-end-development">Back-end Development</option>
+                    <option value="software-engineering">Software Engineering</option>
+                    <option value="quantum-computing">Quantum Computing</option>
+                    <option value="embedded-systems">Embedded Systems</option>
+                    <option value="computer-vision">Computer Vision</option>
+                    <option value="nlp">Natural Language Processing</option>
+                    <option value="bioinformatics">Bioinformatics</option>
+                    <option value="5g-technology">5G Technology</option>
+                    <option value="cryptocurrency">Cryptocurrency</option>
+                    <option value="it-project-management">IT Project Management</option>
+                    <option value="system-administration">System Administration</option>
+                    <option value="enterprise-architecture">Enterprise Architecture</option>
+                    <option value="information-security">Information Security</option>
+                    <option value="digital-marketing">Digital Marketing</option>
+                    <option value="ecommerce-development">E-commerce Development</option>
+                    <option value="data-visualization">Data Visualization</option>
+                    <option value="api-development">API Development</option>
+                    <option value="microservices-architecture">Microservices Architecture</option>
+                    <option value="containerization">Containerization (Docker, Kubernetes)</option>
+                    <option value="serverless-computing">Serverless Computing</option>
+                    <option value="edge-computing">Edge Computing</option>
+                    <option value="distributed-systems">Distributed Systems</option>
+                    <option value="high-performance-computing">High-Performance Computing</option>
+                    <option value="computer-graphics">Computer Graphics</option>
+                </select>
+            </fieldset>
+            
+            <!-- Add other form fields -->
+            
+            <button type="submit">Generate Learning Path</button>
+        </form>
+    </div>
+    This code will create a form with a single-select dropdown menu for the user to choose their area of interest. Would you like me to explain any part of this code or provide any additional information about creating forms with dropdown menus? CopyRetryClaude does not have the ability to run the code it generates yet.Claude can make mistakes. Please double-check responses. 3.5 Sonnet
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="contact-info">
+                <h1>Contact Information:</h1>
+                <ul>
+                    <li>Email: support@techpathsystem.com</li>
+                    <li>Phone: +2349064976053</li>
+                    <li>Social Media:
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="links">
+                <h1>Quick Links:</h1>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="questions.html">NexusAi</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            
+            <p><i>&copy; Copyright NexusAI 2024. All rights reserved.</i></p>
+        </div>
+    </footer>
+
+</body>
+</html>

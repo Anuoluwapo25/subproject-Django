@@ -22,29 +22,12 @@ def get_ai_suggestions(interests):
    - Brief description of each selected technology
    - How these technologies relate to each other (if applicable)
 
-2. Industry Trends:
-   - Current trends in these fields
-   - Emerging technologies or practices
-   - Job market outlook
-
-3. Advice:
-   - Why these technologies are important
-   - Potential challenges in learning these technologies
-   - Tips for success in these fields
-
-4. Personalized Learning Path:
-   - Step-by-step guide to learning these technologies
-   - Suggest a logical order for learning multiple technologies
-   - Estimated time frame for each step
-   - Key concepts to focus on for each technology
-   - Suggested projects or practical applications to reinforce learning
-
-5. Resources:
+2. Resources:
    - Types of courses or certifications that would be beneficial
    - Recommended books or online resources
    - Relevant communities or forums for support and networking
 
-Please structure your response clearly with headers and bullet points for easy readability."""
+Please structure your responses for each section clearly with headers in bold and each points well structured for easy readability. can every link be accessible with an underline"""
     
     try:
         response = model.generate_content(prompt)

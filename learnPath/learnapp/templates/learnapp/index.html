@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'learning_paths/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'learnapp/styles.css' %}" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -22,7 +22,7 @@
         <div class="container">
           <div class="logo">
             <a href="index.html"
-              ><img src="./img/Nexus_logo.png" alt="Nexus Logo"
+              ><img src="{% static 'img/Nexus_logo.png' %}" alt="Nexus Logo"
             /></a>
           </div>
           <nav>
@@ -66,7 +66,7 @@
                 >Get Started</a
               > -->
               <a 
-                href="./question.html"
+                href="{% url 'questions' %}"
                 class="hero-btn get-started-btn">Get Started
               </a>
             </div>
@@ -80,12 +80,12 @@
       <div class="demo-text">
         <h1>Watch a Demo</h1>
       </div>
-      <div class="video-container">
+      <!-- <div class="video-container">
         <video controls>
           <source src="./video/Tech Learning Path.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-      </div>
+      </div> -->
     </section>
 
     <!-- ABOUT -->
@@ -107,7 +107,7 @@
         <div class="card-container">
           <div class="card">
             <img
-              src="./img/pexels-michelangelo-buonarroti-8728562.jpg"
+              src="{% static 'img/pexels-michelangelo-buonarroti-8728562.jpg' %}"
               alt="Mission"
             />
             <h3>Our Mission</h3>
@@ -117,7 +117,7 @@
             </p>
           </div>
           <div class="card">
-            <img src="./img/pexels-pavel-danilyuk-8439093.jpg" alt="Vision" />
+            <img src="{% static 'img/pexels-pavel-danilyuk-8439093.jpg' %}" alt="Vision" />
             <h3>Our Vision</h3>
             <p>
               To be a leader in tech education, making advanced learning
@@ -125,7 +125,7 @@
             </p>
           </div>
           <div class="card">
-            <img src="./img/pexels-divinetechygirl-1181243.jpg" alt="Values" />
+            <img src="{% static 'img/pexels-divinetechygirl-1181243.jpg' %}" alt="Values" />
             <h3>Our Values</h3>
             <p>
               Innovation, Integrity, Excellence, Inclusivity, and Community.
@@ -144,7 +144,7 @@
             <figure>
               <div>
                   <img
-                    src="./img/jacinta.jpg"
+                    src="{% static '/img/jacinta.jpg' %}" 
                     alt="User 1"
                   />
               </div>
@@ -154,7 +154,7 @@
           </div>
           <div class="user">
             <figure>
-              <div><img src="./img/pexels-pavel-danilyuk-8439093.jpg" alt="User 2" /></div>
+              <div><img src="{% static 'img/pexels-pavel-danilyuk-8439093.jpg' %}" alt="User 2" /></div>
               <figcaption>Career Switch</figcaption>
               <p>
                 "I transitioned into a tech career seamlessly with their
@@ -164,7 +164,7 @@
           </div>
           <div class="user">
             <figure>
-              <div><img src="./img/udeme.jpg" alt="User 3" /></div>
+              <div><img src="{% static 'img/udeme.jpg' %}" alt="User 3" /></div>
               <figcaption>Developer</figcaption>
               <p>"The guidance I received was invaluable for my career growth"</p>
             </figure>
