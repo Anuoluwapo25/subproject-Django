@@ -1,0 +1,175 @@
+/* Add this to your learnapp/styles.css file
+* {
+    padding: 20px;
+    background-color: aquamarine;
+}
+.results-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ai-suggestions {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.ai-suggestion-item {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+.coursera-courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.course {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course a {
+    text-decoration: none;
+    color: #007bff;
+} */
+
+
+/* styles.css */
+
+header {
+    margin-bottom: 50px;
+}
+
+.navbar-container {
+    height: 83px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo img {
+    width: 120px;
+    height: 80px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: gray;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #27AE60;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+}
+
+.sidebar {
+    background-color: #333;
+    border-right: 1px solid #27AE60;
+    margin-top: 10px;
+}
+
+.sidebar h2 {
+    margin-top: 50px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #27AE60;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.results-container {
+    max-width: 100%;
+    margin: auto;
+    padding: 10px;
+}
+
+.ai-suggestions-grid {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+.ai-suggestion {
+    display: grid;
+    color: rgb(6, 5, 5);
+    background-color: white;
+    border: 5px solid #27AE60;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 10px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.coursera-courses {
+    margin-top: 30px;
+    color: #27AE60;
+}
+
+.course {
+    background-color: white;
+    border: 3px solid #27AE60;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.course a {
+    color: #27AE60;
+    text-decoration: none;
+}
+
+.course a:hover {
+    text-decoration: underline;
+}
+
