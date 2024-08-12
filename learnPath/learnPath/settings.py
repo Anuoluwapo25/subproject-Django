@@ -37,7 +37,10 @@ SECRET_KEY = 'django-insecure-_24+-%89@vqbu68u6!-xm24#eexi^*u+5tk1%olotk!0_zx2!b
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'learnpath-vpca.onrender.com'
+    'learnpath-vpca.onrender.com',
+    '127.0.0.1',
+    'localhost'
+
 ]
 
 
@@ -50,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise',
     'learnapp',
 ]
 
@@ -131,15 +135,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = BASE_DIR / 'learnapp' / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'learnapp', 'staticfiles')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    BASE_DIR / 'learnapp' / 'static',
+    # BASE_DIR / "static",
+    # BASE_DIR / 'learnapp' / 'static',
 ]
 
 # Default primary key field type
