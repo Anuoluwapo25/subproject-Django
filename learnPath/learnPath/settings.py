@@ -58,7 +58,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -139,11 +141,12 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'learnapp', 'staticfiles')
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 STATICFILES_DIRS = [
     # BASE_DIR / "static",
-    # BASE_DIR / 'learnapp' / 'static',
+    BASE_DIR / 'learnapp' / 'static',
 ]
 
 # Default primary key field type
